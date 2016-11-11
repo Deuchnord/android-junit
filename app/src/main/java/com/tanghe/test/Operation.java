@@ -31,5 +31,6 @@ public class Operation {
     }
 
     public static class DivideByZeroException extends Exception { }
+    public static class NegativeNumberException extends Exception { }
 
 }
