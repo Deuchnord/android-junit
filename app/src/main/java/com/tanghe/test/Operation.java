@@ -39,6 +39,8 @@ public class Operation {
 
     public static double racineCarree(double n) throws NegativeNumberException
     {
+        if(n < 0)
+            throw new NegativeNumberException();
         return Math.sqrt(n);
     }
 

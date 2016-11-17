@@ -59,14 +59,14 @@ public class OperationTest {
         {
             assertEquals(4, Operation.racineCarree(16), 0);
         }
-        catch(NegativeNumberException e)
+        catch(Operation.NegativeNumberException e)
         {
             fail();
         }
     }
 
     @Test(expected = Operation.NegativeNumberException.class)
-    public void testRacineCarreeDUnNombreNegatif throws Operation.NegativeNumberException
+    public void testRacineCarreeDUnNombreNegatif() throws Operation.NegativeNumberException
     {
         Operation.racineCarree(-42);
     }
