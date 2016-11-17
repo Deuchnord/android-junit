@@ -46,4 +46,29 @@ public class OperationTest {
         Operation.division(15, 0);
     }
 
+    @Test
+    public void testCarre()
+    {
+        assertEquals(16, Operation.carre(4), 0);
+    }
+
+    @Test
+    public void testRacineCarree()
+    {
+        try
+        {
+            assertEquals(4, Operation.racineCarree(16), 0);
+        }
+        catch(NegativeNumberException e)
+        {
+            fail();
+        }
+    }
+
+    @Test(expected = Operation.NegativeNumberException.class)
+    public void testRacineCarreeDUnNombreNegatif throws Operation.NegativeNumberException
+    {
+        Operation.racineCarree(-42);
+    }
+
 }
